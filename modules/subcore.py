@@ -11,6 +11,8 @@ import os
 
 import pickle
 import folder_paths
+import ultralytics.nn.tasks
+torch.serialization.add_safe_globals([ultralytics.nn.tasks.DetectionModel])
 
 
 orig_torch_load = torch.load
